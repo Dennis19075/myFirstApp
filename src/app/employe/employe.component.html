@@ -1,1 +1,8 @@
-<p>Here goes an employe!</p>
+Insert the company: <input type="text" #company (keyup)="0">
+
+<div style="text-align: center;">
+    <h3>Hallo, my names is {{name}} {{lastname}}</h3>
+    <h4>I am {{age}}.</h4>
+    <p>And I am currently employed by {{company.value}}</p>
+</div>
+
