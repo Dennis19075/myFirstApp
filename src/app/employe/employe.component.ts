@@ -15,8 +15,21 @@ export class EmployeComponent implements OnInit {
 
   registeredUser = false;
 
+  RegisterText = "There is nobody registered.";
+
   getRegisteredUser(){
     this.registeredUser = false;
+  }
+
+  setRegisteredUser(event: Event){
+    // alert('User signed up correctly!');
+    // this.RegisterText = "User signed up correctly!"
+    if ((<HTMLInputElement>event.target).value=="yes") {
+      this.RegisterText = "User signed up correctly!"
+    } else {
+      this.RegisterText = "There is nobody registered."
+    }
+    
   }
 
   constructor() { }

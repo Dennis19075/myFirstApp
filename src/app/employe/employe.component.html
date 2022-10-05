@@ -6,7 +6,11 @@ Insert the company: <input type="text" #company (keyup)="0" [disabled]="ableBox"
     <p>And I am currently employed by {{company.value}}</p>
 
 
-    Registered: <input type="checkbox" id="register" [checked]="registeredUser">
+    {{RegisterText}}
+    <br>
+    Registered: <input type="radio" value="yes" name="registered" id="register" [checked]="registeredUser" (click)="setRegisteredUser($event)">
+    No registered
+    <input type="radio" value="no" name="registered" (click)="setRegisteredUser($event)">
     {{getRegisteredUser()}}
 </div>
 
