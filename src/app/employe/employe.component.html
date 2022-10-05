@@ -1,8 +1,12 @@
-Insert the company: <input type="text" #company (keyup)="0">
+Insert the company: <input type="text" #company (keyup)="0" [disabled]="ableBox">
 
 <div style="text-align: center;">
     <h3>Hallo, my names is {{name}} {{lastname}}</h3>
     <h4>I am {{age}}.</h4>
     <p>And I am currently employed by {{company.value}}</p>
+
+
+    Registered: <input type="checkbox" id="register" [checked]="registeredUser">
+    {{getRegisteredUser()}}
 </div>
 

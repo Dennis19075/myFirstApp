@@ -11,6 +11,13 @@ export class EmployeComponent implements OnInit {
   lastname = 'Inosaka';
   age = 24;
   // company = 'Saito Inosaka Inc.'
+  ableBox = true;
+
+  registeredUser = false;
+
+  getRegisteredUser(){
+    this.registeredUser = false;
+  }
 
   constructor() { }
 
