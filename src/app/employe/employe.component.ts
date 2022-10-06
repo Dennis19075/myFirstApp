@@ -10,8 +10,13 @@ export class EmployeComponent implements OnInit {
   name = 'Saito';
   lastname = 'Inosaka';
   age = 24;
-  // company = 'Saito Inosaka Inc.'
-  ableBox = true;
+  company = 'MongoDB'
+
+  setCompany(event: Event){
+    this.company = (<HTMLInputElement>event.target).value;
+  }
+
+  ableBox = false;
 
   registeredUser = false;
 
